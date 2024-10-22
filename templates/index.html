@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieving Stock Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Stock Price Retriever</h1>
+    <form method="POST">
+        <input id="ticker_input" type="text" name="ticker" placeholder="Enter Stock Ticker Symbol" required>
+        <input id="submit_button" type="submit" value="Get Stock Data">
+    </form>
+
+    {% if ticker %}
+        <h2>Stock Information for {{ ticker }}</h2>
+        <p><strong>Current Price:</strong> {{ current_price }}</p>
+        <p><strong>Open Price:</strong> {{ open_price }}</p>
+        <p><strong>Previous Close:</strong> {{ previous_close }}</p>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="{{ ticker }} Stock Price Graph">
+    {% endif %}
+
+</body>
+
+</html>

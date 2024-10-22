@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+    font-size: 2rem;
+}
+
+#ticker_input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#submit_button{
+    padding: 10px;
+    border: groove;
+    cursor: pointer;
+}

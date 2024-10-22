@@ -1,0 +1,15 @@
+venv
+.env
+
+# Temporarily ignore the files below
+#pdatareader-stockData.ipynb
+#sp500Predictor.ipynb
+#stock_retriever.py
+#yfinance-stockData.ipynb
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+#!.elasticbeanstalk/*.global.yml
+
+# Temporarily excluding Procfile
+Procfile
